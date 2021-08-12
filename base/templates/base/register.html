@@ -1,0 +1,23 @@
+{% extends 'base/main.html' %}
+
+{% block content %}
+<div class="header-line">
+<h1>Register</h1>
+</div>
+
+<form class="regform" action="" method="POST">
+    {% csrf_token %}
+    <label>{{form.username.label}}</label>
+    {{form.username}}
+    <label>{{form.password1.label}}</label>
+    {{form.password1}}
+    <label>{{form.password2.label}}</label>
+    {{form.password2}}
+   
+<input type="submit" value="Register" style="margin-top: 1rem;">
+</form>
+
+<div class="reg" style="margin-left: 17.5vw;">
+<p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+</div>
+{% endblock content %}

@@ -1,0 +1,17 @@
+{% extends 'base/main.html' %}
+
+{% block content %}
+<div class="header-line">
+<h1>Login</h1>
+</div>
+
+<form class="loginform" action="" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+<input type="submit" value="Login">
+</form>
+
+<div class="log" style="margin-left: 17.5vw;">
+<p>Don't have an account? <a href="{% url 'register' %}">Register</a></p>
+</div>
+{% endblock content %}

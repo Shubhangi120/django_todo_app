@@ -1,0 +1,176 @@
+<!-- shubh@1204 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do items</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Raleway&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+        body{
+            min-height: 100vh;
+            background:linear-gradient(to right top,#18a5a7, #bfffc7);
+            font-family: 'Nunito', sans-serif;
+            
+        }
+
+        .container{
+            margin-left: 25vw;
+            margin-top: 10vh;
+            background-color: white;
+            min-height: 80vh;
+            width: 104vh;
+            background: linear-gradient(to right bottom, rgba(255,255,255,0.6), rgba(255,255,255,0.2));
+            border-radius: 2rem;
+           
+            
+        }
+        
+
+
+         @keyframes cont {
+             from{
+                 transform:skew(0deg, 0deg);
+             }
+             to{
+                transform:skew(30deg, 0deg);
+             }
+             
+         }
+        h1,h2,h3,h4,h5,h6{
+            font-family: 'Raleway', sans-serif;
+            display: flex;
+            justify-content: center;
+            
+        }
+        .header-line h3{
+            padding: 0.75rem;
+        }
+
+        a,p{
+            color: black;
+            text-decoration: none;
+        }
+
+        .header-line{
+            padding-top: 2rem;
+        }
+        
+        .header-line a{
+            padding: 1rem;
+    
+        }
+
+        .complete-icon{
+            display: inline-block;
+            margin-left: -19px;
+            color: rgb(63, 157, 9);
+            font-weight: bolder;
+        }
+        .task-wrapper{
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+            padding: 2rem;
+            border: 0.1rem solid #d867b7;
+        }
+        
+        .delete-icon{
+            font-weight: 900;
+            color: #ff00008f;
+            font-size: 22px;
+            
+        }
+
+        .searchnadd{
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+            padding-top: 1rem;
+            padding-left: 1rem;
+        }
+        #add-task{
+            font-size: 42px;
+            color: #e43ba1;
+            font-weight: bolder;
+            text-shadow: 1px 1px #595056;
+            margin-top: -1rem;
+            margin-right: 2rem;
+
+        }
+        input[type=text],
+        input[type=password],
+        textarea{
+            background-color: #d07eb1;
+            border: 3px solid #e5a8d6;
+            border-radius: 3px;
+            height: 28px;
+            width: 12vw;
+            margin-bottom: 1rem;
+        }
+        .searchnadd .submitbtn,
+        input[type=submit]{
+            display: block;
+            height: 25px;
+            width: 5vw;
+            border-radius: 3px;
+            margin-left: 52px;
+            background-color: transparent;
+            border: 2px solid #d07eb1;
+            color: black;
+            border-left: 1rem;
+            transition: all 0.75s;
+            
+        }
+        .searchnadd .submitbtn,
+        input[type=submit]:hover{
+            background-color: white ;
+            color: #d07e;
+
+        }
+        label{
+            
+            padding-top: 2px !important;
+            display: block;
+        }
+        li{
+            list-style: none;
+        }
+        form[method=POST]{
+            padding-top: 2rem;
+            padding-left: 18.5rem;
+            padding-bottom: 1rem;
+        }
+        form[method=POST] p{
+            margin-bottom: 1rem;
+        }
+        #id_description{
+            height: 20vh;
+            width: 21vw;
+
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        {% block content %}
+           
+        {% endblock content %}
+        
+    </div>
+    
+</body>
+</html>
